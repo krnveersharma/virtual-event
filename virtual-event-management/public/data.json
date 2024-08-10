@@ -1,0 +1,63 @@
+[
+    {
+      "title": "Tech Conference 2024",
+      "venue": "Tech Hub Convention Center",
+      "category": "Technology",
+      "price": "$199"
+    },
+    {
+      "title": "Art Exhibition",
+      "venue": "City Art Gallery",
+      "category": "Art",
+      "price": "$50"
+    },
+    {
+      "title": "Music Festival",
+      "venue": "Central Park",
+      "category": "Music",
+      "price": "$120"
+    },
+    {
+      "title": "Food Fair",
+      "venue": "Downtown Plaza",
+      "category": "Food",
+      "price": "$30"
+    },
+    {
+      "title": "Film Screening",
+      "venue": "Cineplex Theater",
+      "category": "Film",
+      "price": "$15"
+    },
+    {
+      "title": "Fashion Show",
+      "venue": "Fashion District Hall",
+      "category": "Fashion",
+      "price": "$75"
+    },
+    {
+      "title": "Sports Tournament",
+      "venue": "Stadium Arena",
+      "category": "Sports",
+      "price": "$85"
+    },
+    {
+      "title": "Literary Festival",
+      "venue": "Book Haven Auditorium",
+      "category": "Literature",
+      "price": "$40"
+    },
+    {
+      "title": "Science Fair",
+      "venue": "Science Museum",
+      "category": "Science",
+      "price": "$60"
+    },
+    {
+      "title": "Dance Workshop",
+      "venue": "Dance Studio",
+      "category": "Dance",
+      "price": "$25"
+    }
+  ]
+  
