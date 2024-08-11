@@ -17,6 +17,7 @@ datasource db {
 
 model Event{
   id Int @id @default(autoincrement())
+  organiserId String
   organiser String
   event_name String
   category String

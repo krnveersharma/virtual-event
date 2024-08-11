@@ -46,10 +46,10 @@ const Navbar = () => {
             <Link href="/events" className={styles.link} title="Events">
               Events
             </Link>
-            <Link href="./registerevents" className={styles.link} title="Registered_Events">
+            <Link href={'#'} className={styles.link} title="Registered_Events">
               Registered Events
             </Link>
-            <Link href="#" className={styles.link} title="Make_Event">
+            <Link href="./registerevents"  className={styles.link} title="Make_Event">
               Make Event
             </Link>
             <Link href="#" className={styles.link} title="Pricing">
@@ -72,10 +72,10 @@ const Navbar = () => {
                 <Link href="/events" className={styles.mobileLink} title="Events">
                   Events
                 </Link>
-                <Link href="./registerevents" className={styles.mobileLink} title="Registered_Events">
+                <Link href="#" className={styles.mobileLink} title="Registered_Events">
                   Registered Events
                 </Link>
-                <Link href="#" className={styles.mobileLink} title="Make_Event">
+                <Link href="./registerevents" className={styles.mobileLink} title="Make_Event">
                   Make Event
                 </Link>
                 <Link href="#" className={styles.mobileLink} title="Pricing">
