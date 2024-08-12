@@ -11,6 +11,7 @@
   "dependencies": {
     "@clerk/nextjs": "^5.2.12",
     "next": "14.2.5",
+    "next-cloudinary": "^6.10.0",
     "react": "^18",
     "react-dom": "^18",
     "react-hot-toast": "^2.4.1",

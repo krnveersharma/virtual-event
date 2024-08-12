@@ -15,6 +15,8 @@ const commonStyles = {
   link: "font-medium text-blue-600 transition-all duration-200 hover:text-blue-700 focus:text-blue-700 hover:underline",
 };
 
+
+
 const LoginCard = () => {
   const { user, isLoaded } = useUser();
   const [data, setData] = useState({
@@ -25,6 +27,7 @@ const LoginCard = () => {
     description: "",
     date: new Date().toString(),
     participants: "0",
+    imageBase64:""
   });
   useEffect(()=>{
     if(isLoaded){
@@ -35,8 +38,25 @@ const LoginCard = () => {
     }
   },[isLoaded])
   
-  console.log(user?.id);
-
+  const imgToBase64=(event:any)=>{
+    console.log("here")
+    const file=event.target.files[0];
+    if(file){
+      if (file) {
+        const reader = new FileReader();
+        reader.onloadend = () => {
+          const result = reader.result as string;
+          console.log(result?.split(',')[1]);
+          setData((prev) => ({
+            ...prev,
+            imageBase64: result?.split(',')[1]||"",
+          }))
+         
+        };
+        reader.readAsDataURL(file);
+    }
+  }
+}
   const handleSubmit = async (e: any) => {
     e.preventDefault();
     try {
@@ -57,6 +77,7 @@ const LoginCard = () => {
           description: "",
           date: new Date().toString(),
           participants: "0",
+          imageBase64:""
         });
         toast.success(response.message);
       } else {
@@ -182,9 +203,14 @@ const LoginCard = () => {
                       />
                     </div>
                   </div>
-
+                  <div className="flex flex-col items-center justify-between">
+                      
+                    <input type="file" onChange={(e)=>{
+                      imgToBase64(e);
+                    }} />
+                  </div>
                   <div>
-                    <button type="submit" className={commonStyles.button}>
+                    <button type="submit" className={commonStyles.button} >
                       Submit
                     </button>
                   </div>
