@@ -25,4 +25,14 @@ model Event{
   created_at DateTime
   event_date DateTime
   participants Int 
+  img String
+}
+
+model User{
+  id String @id @default(uuid())
+  firstName String 
+  lastName String
+  username String @unique
+  email String @unique
+  password String
 }

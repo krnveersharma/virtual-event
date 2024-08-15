@@ -9,7 +9,8 @@ interface MakeEventRequestBody {
   description: string;
   created_at:Date;
   event_date:Date;
-  participants:number
+  participants:number;
+  img:string
 }
 
 export const makeEvent: RequestHandler = async(req, res, next) => {
@@ -23,9 +24,9 @@ export const makeEvent: RequestHandler = async(req, res, next) => {
       description: req.body.description,
       created_at:new Date(),
       event_date:event_date,
-      participants:parseInt(req.body.participants)
+      participants:parseInt(req.body.participants),
+      img:req.body.imageBase64
     };
-    console.log(req.body.organiserId)
     if (eventDetails.event_name.length==0) {
       return res.json({ message: "Event name required" ,status:400});
     }
@@ -39,6 +40,9 @@ export const makeEvent: RequestHandler = async(req, res, next) => {
     }
     if (eventDetails.organiser.length == 0) {
       return res.json({ message: "organiser required" ,status:400});
+    }
+    if (eventDetails.img.length == 0) {
+      return res.json({ message: "image required" ,status:400});
     }
    
     
